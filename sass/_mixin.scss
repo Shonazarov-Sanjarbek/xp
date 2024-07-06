@@ -1,0 +1,32 @@
+@mixin btn($background: $btn-color, $color: $white, $padding: 16px 35px){
+    padding: $padding;
+    border: none;
+    outline: none;
+    transition: .5s;
+    border-radius: 25px;
+    background: $background;
+    color: $color;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    &:hover{
+        cursor: pointer;
+        opacity: .7;
+        background: $main-hover;
+    }
+    &:active{
+        transform: scale(.9);
+    }
+}
+@mixin df($justify: center, $align: center){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: row;
+}
+@mixin dfc($justify: center, $align: center){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: column;
+}

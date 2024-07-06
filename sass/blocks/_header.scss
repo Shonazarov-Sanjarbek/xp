@@ -1,0 +1,106 @@
+.header{
+    width: 100%;
+    height: 138px;
+    background: $main-color;
+    @include df();
+}
+.navbar{
+    width: 100%;
+    @include df(space-between, center);    
+    height: 58px;
+    &__logo{
+        width: 15%;
+        height: 37px;
+        transition: .5s;
+        &:hover{
+            cursor: pointer;
+            transform: rotate(15deg);
+        }
+    }
+    &__collection{
+        width: 50%;
+        height: 22px;
+        @include df();
+        gap: 50px;
+    }
+    &__item{
+        color: $text-color;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 22px;
+        transition: .5s;
+        &:hover{
+            opacity: .7;
+        }
+        &:active{
+            transform: scale(.7);
+        }
+    }
+    &__btn{
+        @include btn();
+    }
+    &__burger{
+        width: 30px;
+        @include dfc();
+        gap: 5px;
+        display: none;
+        span{
+            width: 100%;
+            height: 3px;
+            background: $white;
+        }
+    }
+    &__sidebar{
+        position: fixed;
+        top: 0;
+        transition: .3s;
+        right: -300px;
+        width: 200px;
+        height: 100vh;
+        background-color: dodgerblue;
+        @include dfc();
+        gap: 10px;
+    }
+    &__show{
+        right: 0;
+    }
+}
+@media (max-width: 800px){
+    .navbar__logo{
+        height: 30px;
+    }
+    .navbar__collection{
+        gap: 36px;
+    }
+    .navbar__item{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 18px;
+    }
+    .navbar__btn{
+        @include btn($btn-color, $white, 16px 25px)
+    }
+}
+@media (max-width: 650px){
+    .navbar__collection{
+        display: none;
+    }
+}
+@media(max-width: 500px){
+    .navbar__btn{
+        display: none;
+    }
+    .navbar__burger{
+        @include dfc();
+    }
+    .navbar__sidebar{
+        @include dfc(center, start);
+        gap: 10px;
+        padding: 10px 10px;
+    }
+    .sidebar__collection{
+        @include dfc(center, start);
+        gap: 10px;
+        padding: 5px 10px;
+    }
+}
