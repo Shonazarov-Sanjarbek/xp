@@ -3,7 +3,9 @@ const btn = document.querySelector(".navbar__burger")
 
 
 
-btn.addEventListener("click", sidebarOpen)
+btn.addEventListener("click", ()=>{
+    sidebarOpen()
+})
 
 
 function sidebarOpen() {

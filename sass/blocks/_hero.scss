@@ -1,0 +1,215 @@
+.hero{
+    width: 100%;
+    min-height: 1000px;
+    background: $main-color;
+    &__wrapper{
+        width: 100%;
+        @include df(start ,center);
+        gap: 34px;
+    }
+    &__content{
+        width: 50%;
+        @include dfc(start, start);
+        gap: 40px;
+    }
+    &__btn{
+        width: 100%;
+        @include df(start, start);
+        button{
+            @include btn();
+            span{
+                font-size: 24px;
+                font-weight: 400;
+            }
+        }
+    }
+    &__subtitle{
+        width: 100%;
+        span{
+            font-size: 64px;
+            font-weight: 700;
+            line-height: 80px;
+            color: $white;
+        }
+    }
+    &__desc{
+        width: 95%;
+        span{
+            font-size: 18px;
+            color: $text-color;
+            font-weight: 400;
+            line-height: 28px;
+        }
+    }
+    &__comment{
+        width: 100%;
+        @include df(start, center);
+        gap: 50px;
+        button{
+            @include btn();
+        }
+        span{
+            font-size: 18px;
+            font-weight: 400;
+            color: $white;
+            line-height: 28px;
+        }
+    }
+    &__img{
+        width: 50%;
+        img{
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 1090px){
+    .hero__subtitle{
+        span{
+            font-size: 56px;
+            line-height: 70px;
+        }
+    }
+    .hero__desc{
+        span{
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+    .hero__btn{
+        button{
+            @include btn();
+            span{
+                font-size: 18px;
+            }
+        }
+    }
+}
+@media (max-width: 900px){
+    .hero{
+        min-height: 800px;
+    }
+    .hero__content{
+        gap: 30px;
+    }
+    .hero__subtitle{
+        span{
+            font-size: 42px;
+            line-height: 60px;
+        }
+    }
+}
+@media (max-width: 735px){
+    .hero{
+        min-height: 700px;
+    }
+    .hero__subtitle{
+        span{
+            font-size: 36px;
+            line-height: 50px;
+        }
+    }
+    .hero__desc{
+        span{
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
+    .hero__btn{
+        button{
+            @include btn();
+            span{
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media (max-width: 650px){
+    .hero{
+        min-height: 600px;
+    }
+    .hero__subtitle{
+        span{
+            font-size: 28px;
+            line-height: 40px;
+        }
+    }
+    .hero__comment{
+        button{
+            @include btn($btn-color, $white, 10px 20px);
+            span{
+                font-size: 14px;
+            }
+        }
+        span{
+            font-size: 14px;
+        }
+    }
+}
+
+@media (max-width: 500px){
+    .hero__subtitle{
+        span{
+            font-size: 22px;
+            line-height: 30px;
+        }
+    }
+    .hero__btn{
+        button{
+            @include btn($btn-color, $white, 15px 25px);
+            span{
+                font-size: 16px;
+            }
+        }
+    }
+    .hero__comment{
+        button{
+            @include btn($btn-color, $white, 8px 12px);
+        }
+    }
+}
+
+@media (max-width: 425px){
+    .hero__subtitle{
+        span{
+            font-size: 20px;
+            line-height: 28px;
+        }
+    }
+    .hero__btn{
+        button{
+            @include btn($btn-color, $white, 15px 25px);
+            span{
+                font-size: 16px;
+            }
+        }
+    }
+    .hero__comment{
+        gap: 20px;
+        button{
+            @include btn($btn-color, $white, 5px 10px);
+            span{
+                font-size: 14px;
+                line-height: 18px;
+            }
+        }
+        span{
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
+}
+
+@media (max-width: 365px){
+    .hero__comment{
+        gap: 10px;
+        button{
+            @include btn($btn-color, $white, 5px 5px);
+            span{
+                font-size: 14px;
+                line-height: 18px;
+            }
+        }
+    }
+}

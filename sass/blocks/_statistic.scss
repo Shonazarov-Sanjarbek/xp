@@ -1,0 +1,102 @@
+.statistic{
+    width: 100%;
+    min-height: 323px;
+    margin-top: -162px;
+    background: $white;
+    border-radius: 30px;
+    @include df();
+    &__block{
+            width: 90%;
+            height: 167px;
+            @include dfc(start, center);
+            gap: 79px;
+    }
+    &__subtitle{
+        width: 100%;
+        height: auto;
+        @include dfc(center, center);
+        span{
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 22px;
+            color: $main-color;
+        }
+    }
+    &__wrapper{
+            width: 100%;
+            height: auto;
+            @include df(space-between, start);
+    }
+    &__card{
+        width: 150px;
+        height: 66px;
+        @include dfc(start, start);
+        gap: 25px;
+    }
+    &__card__desc{
+        width: 100%;
+        text-align: center;
+        p{
+            font-size: 18px;
+            color: $main-color;
+            font-weight: 600;
+            line-height: 22px;
+        }
+    }
+    &__card__text{
+        width: 100%;
+        @include df();
+        p{
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 22px;
+            color: $main-color;
+        }
+    }
+}
+
+@media (max-width: 800px){
+    .statistic__block{
+        gap: 60px;
+    }
+    .statistic__card{
+        gap: 15px;
+    }
+    .statistic__card__text{
+        p{
+            font-size: 16px;
+        }
+    }
+}
+
+@media (max-width: 650px){
+    .statistic__block{
+        gap: 50px;
+    }
+    .statistic__card{
+        gap: 15px;
+    }
+    .statistic__card__text{
+        p{
+            font-size: 14px;
+        }
+    }
+}
+
+@media (max-width: 550px){
+    .statistic__block{
+        gap: 50px;
+    }
+    .statistic__wrapper{
+        @include dfc();
+        gap: 40px;
+    }
+    .statistic__card{
+        width: 100%;
+    }
+    .statistic__card__text{
+        p{
+            font-size: 18px;
+        }
+    }
+}
