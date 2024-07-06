@@ -17,6 +17,10 @@
             transform: rotate(15deg);
         }
     }
+    &__wrapper{
+        @include df(space-between, center);
+        gap: 50px;
+    }
     &__collection{
         width: 50%;
         height: 22px;
@@ -50,19 +54,16 @@
             background: $white;
         }
     }
-    &__sidebar{
+    &__show{
         position: fixed;
         top: 0;
         transition: .3s;
-        right: -300px;
+        right: 0;
         width: 200px;
         height: 100vh;
-        background-color: dodgerblue;
+        background-color: $main-color;
         @include dfc();
         gap: 10px;
-    }
-    &__show{
-        right: 0;
     }
 }
 @media (max-width: 800px){
@@ -81,26 +82,28 @@
         @include btn($btn-color, $white, 16px 25px)
     }
 }
-@media (max-width: 650px){
+@media (max-width: 670px){
     .navbar__collection{
-        display: none;
-    }
-}
-@media(max-width: 500px){
-    .navbar__btn{
         display: none;
     }
     .navbar__burger{
         @include dfc();
+    }    
+    .navbar__btn{
+        display: none;
     }
-    .navbar__sidebar{
-        @include dfc(center, start);
-        gap: 10px;
-        padding: 10px 10px;
-    }
-    .sidebar__collection{
-        @include dfc(center, start);
-        gap: 10px;
-        padding: 5px 10px;
+    .navbar__show{
+        @include dfc(start, start);
+        gap: 20px;
+        padding: 50px 15px;
+        .navbar__collection{
+            display: block;
+            gap: 10px;
+        }
+        .navbar__item{
+            font-size: 18px;
+            line-height: 36px;
+            color: $white;
+        }
     }
 }

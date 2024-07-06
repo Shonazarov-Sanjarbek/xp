@@ -1,4 +1,10 @@
-const sidebar = document.querySelector(".navbar__sidebar")
+const sidebar = document.querySelector(".navbar__wrapper")
+const btn = document.querySelector(".navbar__burger")
+
+
+
+btn.addEventListener("click", sidebarOpen)
+
 
 function sidebarOpen() {
     sidebar.classList.toggle("navbar__show")
