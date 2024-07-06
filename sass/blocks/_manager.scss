@@ -1,0 +1,84 @@
+.manager{
+    width: 100%;
+    background: $main-color;
+    &__wrapper{
+        padding: 102px 0;
+        width: 100%;
+        @include df(start, center);
+    }
+    &__img{
+        width: 50%;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__content{
+        width: 50%;
+        @include dfc(start, start);
+        gap: 33px;
+        p:nth-child(1){
+            font-size: 16px;
+            font-weight: 500;
+            color: $white;     
+        }
+        p:nth-child(2){
+            font-size: 16px;
+            font-weight: 500;
+            color: $white;     
+        }
+        p:nth-child(3){
+            font-size: 16px;
+            font-weight: 400;
+            color: $text-color;
+        }
+    }
+}
+
+
+@media(max-width:700px){
+    .manager{
+        .manager__wrapper{
+            .manager__content{
+                p:nth-child(1){
+                    font-size: 12px;
+                    font-weight: 500;
+                    color: $white;     
+                }
+                p:nth-child(2){
+                    font-size: 12px;
+                    font-weight: 500;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 650px){
+    .manager{
+        margin-top: 1300px;
+    }
+}
+@media(max-width:500px){
+    .manager{
+        margin-top: 1000px;
+        .manager__wrapper{
+            padding: 20px 0;
+            @include dfc(start, start);
+            .manager__content{
+                width: 100%;
+                text-align: center;
+                p:nth-child(1){
+                    font-size: 12px;
+                    font-weight: 500;
+                    color: $white;     
+                }
+                p:nth-child(2){
+                    font-size: 12px;
+                    font-weight: 500;
+                    color: $white;
+                }
+            }
+        }
+    }
+}

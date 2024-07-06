@@ -3,6 +3,13 @@
     height: 138px;
     background: $main-color;
     @include df();
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+.header.shrink{
+    background: #08556cd4;
+    height: 80px;
 }
 .navbar{
     width: 100%;
@@ -59,9 +66,9 @@
         top: 0;
         transition: .3s;
         right: 0;
-        width: 200px;
+        width: 150px;
         height: 100vh;
-        background-color: $main-color;
+        background-color: $btn-color;
         @include dfc();
         gap: 10px;
     }
